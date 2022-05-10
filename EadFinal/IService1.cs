@@ -22,7 +22,7 @@ namespace EadFinal
 
         // TODO: Add your service operations here
         [OperationContract]
-        bool AddEmployee(Employee employee);
+        bool AddEmployee(string name, double salary, string department);
 
         [OperationContract]
         IEnumerable<Employee> SearchEmployees(string keyword);

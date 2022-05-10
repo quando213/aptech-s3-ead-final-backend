@@ -15,11 +15,18 @@ namespace EadFinal
     public class Service1 : IService1
     {
         private MyDbContext db = new MyDbContext();
-        public bool AddEmployee(Employee employee)
+        public bool AddEmployee(string name, double salary, string department)
         {
             try
             {
+                var employee = new Employee()
+                {
+                    Name = name,
+                    Salary = salary,
+                    Department = department,
+                };
                 db.Employees.Add(employee);
+                db.SaveChanges();
                 return true;
             } catch (Exception)
             {

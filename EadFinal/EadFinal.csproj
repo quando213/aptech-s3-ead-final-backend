@@ -76,6 +76,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\MyDbContext.cs" />
+    <Compile Include="Migrations\202205101555552_InitialCreate.cs" />
+    <Compile Include="Migrations\202205101555552_InitialCreate.designer.cs">
+      <DependentUpon>202205101555552_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205101601454_initDB.cs" />
+    <Compile Include="Migrations\202205101601454_initDB.designer.cs">
+      <DependentUpon>202205101601454_initDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
@@ -94,6 +103,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202205101555552_InitialCreate.resx">
+      <DependentUpon>202205101555552_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205101601454_initDB.resx">
+      <DependentUpon>202205101601454_initDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
